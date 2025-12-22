@@ -2,7 +2,7 @@ module.exports = function (eleventyConfig) {
   // Copy assets through
   eleventyConfig.addPassthroughCopy("my-site/src/assets");
 
-  // Copy admin folder (this is the simple, working way)
+  // Copy admin folder (now inside src/input)
   eleventyConfig.addPassthroughCopy("admin");
 
   // Watch for changes in CSS and images
