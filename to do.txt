@@ -1,0 +1,11 @@
+To do next:
+
+Finalise base.njk to wire it all together
+
+Include all components in index.njk
+
+Set up Eleventy build command (npx eleventy)
+
+Test the full flow with one build
+
+Later: write your automation script in fetch-baserow.js

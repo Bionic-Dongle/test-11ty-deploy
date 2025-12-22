@@ -1,0 +1,44 @@
+---
+layout: base.njk
+---
+
+<h2>Welcome to My Site</h2>
+<p>Expert product reviews and recommendations</p>
+
+<div style="margin-top: 40px;">
+  {% for post in collections.posts | reverse %}
+    {% if loop.index <= 4 %}
+    <article style="margin-bottom: 30px; padding: 25px; border: 1px solid #e0e0e0; border-radius: 12px; background: white;">
+      <h3 style="margin-bottom: 15px;">
+        <a href="{{ post.url }}" style="color: var(--text-dark); text-decoration: none;">
+          {{ post.data.title }}
+        </a>
+      </h3>
+      
+      <div style="margin-bottom: 20px;">
+        <a href="{{ post.url }}">
+          {% if post.data.image %}
+          <img src="{{ post.data.image }}" alt="{{ post.data.title }}" style="width: 100%; height: 400px; object-fit: cover; border-radius: 12px; border: 1px solid #ddd;">
+          {% else %}
+          <div style="width: 100%; height: 400px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+            Featured Image
+          </div>
+          {% endif %}
+        </a>
+      </div>
+      
+      <p style="color: var(--text-medium); line-height: 1.6; margin-bottom: 15px;">
+        {{ post.data.excerpt or "Like balancing on a tightrope amidst a storm, this article explores strategies to navigate life's challenges..." }}
+      </p>
+      
+      <a href="{{ post.url }}" style="color: var(--primary-color); text-decoration: none; font-weight: 500;">
+        Continue reading...
+      </a>
+    </article>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<p style="margin-top: 30px;">
+  <a href="/posts" style="color: var(--primary-color);">View all reviews →</a>
+</p>

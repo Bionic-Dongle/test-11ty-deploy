@@ -1,0 +1,15 @@
+{
+  "name": "my-eleventy-site",
+  "version": "1.0.0",
+  "description": "A static site built with 11ty",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {}
+}

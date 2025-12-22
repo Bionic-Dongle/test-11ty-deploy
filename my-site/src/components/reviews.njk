@@ -1,0 +1,37 @@
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-content">
+      <div class="reviews-text">
+        <p class="section-tag">{{ siteContent.reviews.title }}</p>
+        <h2 class="section-title">{{ siteContent.reviews.subtitle }}</h2>
+        <p class="reviews-description">{{ siteContent.reviews.description }}</p>
+        <a href="{{ siteContent.reviews.cta_link }}" class="btn btn-primary">{{ siteContent.reviews.cta_text }}</a>
+      </div>
+      <div class="reviews-image">
+        <img src="/assets/images/laptop-desk.svg" alt="Affiliate marketing workspace" class="feature-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">{{ siteContent.testimonials.title }}</p>
+      <h2 class="section-title">{{ siteContent.testimonials.subtitle }}</h2>
+    </div>
+    <div class="testimonials-grid">
+      {% for testimonial in siteContent.testimonials.items %}
+        <div class="testimonial-card">
+          <img src="{{ testimonial.avatar }}" alt="{{ testimonial.name }}" class="testimonial-avatar-top">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-text">"{{ testimonial.text }}"</p>
+          <div class="testimonial-author">
+            <h4 class="testimonial-name">{{ testimonial.name }}</h4>
+            <p class="testimonial-title">{{ testimonial.title }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

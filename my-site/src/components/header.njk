@@ -1,0 +1,17 @@
+<header>
+  <div class="header-logo">
+    <a href="/">{{ siteContent.header.logo_text }}</a>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="nav-container">
+    <ul class="nav-menu">
+      {% for link in siteContent.header.nav_links %}
+        <li>
+          <a href="{{ link.href }}">{{ link.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

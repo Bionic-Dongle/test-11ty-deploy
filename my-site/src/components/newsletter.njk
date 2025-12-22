@@ -1,0 +1,17 @@
+<section class="newsletter">
+  <div class="newsletter-container">
+    <h2 class="newsletter-title">{{ siteContent.newsletter.title }}</h2>
+    <p class="newsletter-subtitle">{{ siteContent.newsletter.subtitle }}</p>
+    
+    <div class="contact-info">
+      <p><strong>Email:</strong> {{ siteContent.newsletter.contact_info.email }}</p>
+      <p><strong>Location:</strong> {{ siteContent.newsletter.contact_info.location }}</p>
+      <h3>Hours</h3>
+      <ul>
+      {% for hour in siteContent.newsletter.contact_info.hours %}
+        <li>{{ hour.day }}: {{ hour.time }}</li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

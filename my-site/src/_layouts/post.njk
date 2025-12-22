@@ -1,0 +1,94 @@
+---
+layout: base.njk
+---
+
+<article class="blog-post">
+  <header class="post-header">
+    <div class="container-narrow">
+      <p class="post-category">{{ category }}</p>
+      <h1 class="post-title">{{ title }}</h1>
+      <p class="post-excerpt">{{ excerpt }}</p>
+      <div class="post-meta">
+        <span class="post-author">By {{ author }}</span>
+        <span class="post-date">{{ date | readableDate }}</span>
+      </div>
+    </div>
+  </header>
+
+  {% if product %}
+  <section class="product-summary">
+    <div class="container-narrow">
+      <div class="product-card">
+        <div class="product-header">
+          <h2>{{ product.name }}</h2>
+          <div class="product-rating">
+            <span class="rating-stars">{{ product.rating }}</span>
+            <span class="rating-score">{{ product.score }}/5</span>
+          </div>
+        </div>
+        
+        <div class="product-pros-cons">
+          <div class="pros">
+            <h3>✓ Pros</h3>
+            <ul>
+              {% for pro in product.pros %}
+              <li>{{ pro }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="cons">
+            <h3>✗ Cons</h3>
+            <ul>
+              {% for con in product.cons %}
+              <li>{{ con }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        {% if product.affiliate_link %}
+        <div class="product-cta">
+          <a href="{{ product.affiliate_link }}" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer sponsored">
+            Check Current Price on Amazon →
+          </a>
+          <p class="affiliate-disclaimer">* We earn from qualifying purchases</p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="post-content">
+    <div class="container-narrow">
+      {{ content | safe }}
+    </div>
+  </div>
+
+  {% if product.affiliate_link %}
+  <section class="post-cta-footer">
+    <div class="container-narrow">
+      <div class="cta-box">
+        <h3>Ready to buy the {{ product.name }}?</h3>
+        <p>Get the best price on Amazon today</p>
+        <a href="{{ product.affiliate_link }}" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer sponsored">
+          View on Amazon →
+        </a>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <footer class="post-footer">
+    <div class="container-narrow">
+      <div class="author-bio">
+        <h4>About {{ author }}</h4>
+        <p>Our team of product reviewers tests hundreds of products each year to bring you honest, unbiased recommendations.</p>
+      </div>
+      
+      <div class="post-navigation">
+        <a href="/posts" class="btn btn-secondary">← Back to All Reviews</a>
+      </div>
+    </div>
+  </footer>
+</article>

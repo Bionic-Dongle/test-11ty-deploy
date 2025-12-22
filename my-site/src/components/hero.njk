@@ -1,0 +1,16 @@
+{% if siteContent.hero and siteContent.hero.enabled %}
+<section class="hero">
+  {% if siteContent.hero.image %}
+  <div class="hero-image">
+    <img src="{{ siteContent.hero.image }}" alt="{{ siteContent.hero.title }}">
+  </div>
+  {% endif %}
+  
+  <div class="hero-text">
+    <h1>{{ siteContent.hero.title }}</h1>
+    {% if siteContent.hero.subtitle %}
+    <p>{{ siteContent.hero.subtitle }}</p>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
