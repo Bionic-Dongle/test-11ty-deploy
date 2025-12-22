@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Bionic-Dongle/test-11ty-deploy   # change if your username/repo is different
   branch: main
 
 media_folder: "assets/images"
