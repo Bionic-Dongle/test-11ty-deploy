@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: netlify
+  identity_url: https://test11tydeploy.netlify.app/.netlify/identity
   branch: main
 
 media_folder: "assets/images"
