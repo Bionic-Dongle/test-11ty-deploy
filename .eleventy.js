@@ -1,22 +1,21 @@
 module.exports = function (eleventyConfig) {
-  // Copy assets through
+  // Copy assets through (adjusted paths since input is now root)
   eleventyConfig.addPassthroughCopy("my-site/src/assets");
 
-  // Copy admin folder (now inside src/input)
-  eleventyConfig.addPassthroughCopy("admin");
+  // No need for admin passthrough anymore—it's now inside input and will copy automatically
 
-  // Watch for changes in CSS and images
+  // Watch targets (adjusted)
   eleventyConfig.addWatchTarget("my-site/src/assets/css/");
   eleventyConfig.addWatchTarget("my-site/src/assets/images/");
 
-  // Create blog posts collection
+  // Blog posts collection (adjusted glob)
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi
       .getFilteredByGlob("my-site/src/pages/posts/*.md")
       .reverse();
   });
 
-  // Add date filter for post dates
+  // Date filter stays the same
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return new Date(dateObj).toLocaleDateString("en-US", {
       year: "numeric",
@@ -27,11 +26,11 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      input: "my-site/src",
+      input: ".",               // ← Root of project
       output: "_site",
-      includes: "components",
-      data: "data",
-      layouts: "_layouts",
+      includes: "my-site/src/components",
+      data: "my-site/src/data",
+      layouts: "my-site/src/_layouts",
     },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
