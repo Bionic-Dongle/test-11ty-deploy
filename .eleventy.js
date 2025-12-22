@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
   // Copy assets through
   eleventyConfig.addPassthroughCopy("my-site/src/assets");
-  eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy({"admin": "admin"});
 
   // Watch for changes in CSS and images
   eleventyConfig.addWatchTarget("my-site/src/assets/css/");
