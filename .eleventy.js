@@ -2,8 +2,6 @@ module.exports = function (eleventyConfig) {
   // Copy assets through (adjusted paths since input is now root)
   eleventyConfig.addPassthroughCopy("my-site/src/assets");
 
-  // No need for admin passthrough anymore—it's now inside input and will copy automatically
-
   // Watch targets (adjusted)
   eleventyConfig.addWatchTarget("my-site/src/assets/css/");
   eleventyConfig.addWatchTarget("my-site/src/assets/images/");
@@ -26,7 +24,7 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      input: ".",               // ← Root of project
+      input: ".",                         // Root of project
       output: "_site",
       includes: "my-site/src/components",
       data: "my-site/src/data",
