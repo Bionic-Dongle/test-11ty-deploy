@@ -410,6 +410,7 @@ hr {
   overflow: hidden;
   background: var(--content-bg);
   border-radius: var(--border-radius);
+  padding: 0 !important;
 }
 
 .hero-image img {
@@ -423,7 +424,7 @@ hr {
 }
 
 .hero-text {
-  padding: 50px 60px;
+  padding: 60px 80px !important;
   text-align: center;
 }
 
@@ -440,7 +441,7 @@ hr {
 
 @media (max-width: 768px) {
   .hero-text {
-    padding: 35px 25px;
+    padding: 40px 30px !important;
   }
   
   .hero-text h1 {
