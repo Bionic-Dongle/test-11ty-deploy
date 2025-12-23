@@ -1,3 +1,5 @@
+---
+---
 /* ===================================
    BLOGSTREAM STYLE - 90s Pamphlet Theme
    =================================== */
@@ -44,7 +46,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text-dark);
-  background: linear-gradient(180deg, #87CEEB 0%, #4A90E2 100%);
+  background: linear-gradient(180deg, #FFB347 0%, #FF6B6B 50%, #6A4C93 100%);
   background-attachment: fixed;
   min-height: 100vh;
 }
