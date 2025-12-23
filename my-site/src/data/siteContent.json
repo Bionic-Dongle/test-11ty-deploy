@@ -22,6 +22,11 @@
       }
     ]
   },
+  "hero": {
+    "enabled": true,
+    "title": "Welcome to My Site",
+    "subtitle": "Expert product reviews and recommendations"
+  },
   "sidebar": {
     "categories": [
       {
