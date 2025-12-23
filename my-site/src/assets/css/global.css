@@ -53,7 +53,8 @@ body {
 
 /* Main Site Container - Unified Box */
 .site-container {
-  max-width: 70%;
+  max-width: 1200px;
+  width: 90%;
   margin: 30px auto;
   background: #f5f5f5;
   border: 1px solid var(--border-color);
@@ -401,6 +402,8 @@ hr {
   .author-image {
     position: static;
     margin: 0 auto 20px auto;
+    width: 80px;
+    height: 80px;
   }
   
   .sidebar {
@@ -410,39 +413,107 @@ hr {
 
 @media (max-width: 768px) {
   .site-container {
-    max-width: 95%;
+    width: 95%;
     margin: 10px auto;
+    border-radius: 16px;
   }
   
   .content-wrapper {
-    max-width: 100%;
+    margin: 10px;
   }
   
   .site-header {
     padding: 15px 20px;
   }
   
+  .site-header a {
+    font-size: 1.5rem;
+  }
+  
   .site-nav {
-    padding: 10px 20px;
+    padding: 10px 15px;
   }
   
   .site-nav ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
+  }
+  
+  .site-nav a {
+    font-size: 0.85rem;
+    padding: 6px 12px;
   }
   
   .main-content {
-    padding: 20px;
+    padding: 20px 15px;
   }
   
   .sidebar {
     padding: 15px;
   }
   
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.3rem; }
+  .sidebar-post-image {
+    height: 150px;
+  }
+  
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+  .site-container {
+    width: 98%;
+    margin: 5px auto;
+    border-radius: 12px;
+  }
+  
+  .content-wrapper {
+    margin: 10px;
+  }
+  
+  .site-header {
+    padding: 12px;
+  }
+  
+  .site-header a {
+    font-size: 1.3rem;
+  }
+  
+  .site-nav {
+    padding: 8px;
+  }
+  
+  .site-nav ul {
+    gap: 8px;
+  }
+  
+  .site-nav a {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+  
+  .main-content {
+    padding: 12px;
+  }
+  
+  .sidebar {
+    padding: 12px;
+  }
+  
+  .sidebar-post-image {
+    height: 120px;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
 }
 
 

@@ -1059,7 +1059,7 @@ footer {
 
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: var(--spacing-xl);
   max-width: 1200px;
   margin: 0 auto;
@@ -1172,10 +1172,45 @@ footer {
   .blog-header h1 {
     font-size: 2rem;
   }
+  
+  .blog-header p {
+    font-size: 1rem;
+  }
 
   .posts-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
+  }
+  
+  .post-card-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .blog-header p {
+    font-size: 0.9rem;
+  }
+  
+  .posts-grid {
+    gap: var(--spacing-md);
+  }
+  
+  .post-card-content {
+    padding: var(--spacing-lg);
+  }
+  
+  .post-card-title {
+    font-size: 1.2rem;
+  }
+  
+  .post-card-excerpt {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 2;
   }
 }
 
