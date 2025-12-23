@@ -423,7 +423,7 @@ hr {
 }
 
 .hero-text {
-  padding: 30px 40px;
+  padding: 50px 60px;
   text-align: center;
 }
 
@@ -440,7 +440,7 @@ hr {
 
 @media (max-width: 768px) {
   .hero-text {
-    padding: 20px;
+    padding: 35px 25px;
   }
   
   .hero-text h1 {
@@ -503,7 +503,7 @@ hr {
     max-width: 100%;
     width: 100%;
     margin: 0;
-    border-radius: 0;
+    border-radius: 16px;
     border-left: none;
     border-right: none;
   }
@@ -565,7 +565,7 @@ hr {
     max-width: 100%;
     width: 100%;
     margin: 0;
-    border-radius: 0;
+    border-radius: 12px;
     border-left: none;
     border-right: none;
   }
