@@ -1,12 +1,18 @@
-media_folder: "my-site/src/assets/images"
-public_folder: "/assets/images"
+media_folder: my-site/src/assets/images
+public_folder: /assets/images
 
-collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "my-site/src/pages/posts"
-    create: true
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: my-site/src/pages/posts
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "date" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - name: title
+        label: Title
+        type: string
+      - name: date
+        label: Date
+        type: date
+      - name: body
+        label: Body
+        type: rich-text
