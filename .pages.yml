@@ -2,6 +2,7 @@ media_folder: my-site/src/assets/images
 public_folder: /assets/images
 
 content:
+  # Blog Posts Collection
   - name: posts
     label: Posts
     type: collection
@@ -13,6 +14,79 @@ content:
       - name: date
         label: Date
         type: date
+      - name: body
+        label: Body
+        type: rich-text
+
+  # Site-wide Settings (logo, nav menu, categories, footer)
+  - name: site-settings
+    label: Site Settings
+    type: file
+    path: my-site/src/data/siteContent.json
+    fields:
+      - name: meta_title
+        label: Site Title
+        type: string
+      - name: meta_description
+        label: Site Description
+        type: string
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: logo_text
+            label: Logo Text
+            type: string
+          - name: nav_links
+            label: Navigation Menu
+            type: list
+            items:
+              type: object
+              fields:
+                - name: text
+                  label: Link Text
+                  type: string
+                - name: href
+                  label: Link URL
+                  type: string
+      - name: sidebar
+        label: Sidebar
+        type: object
+        fields:
+          - name: categories
+            label: Categories
+            type: list
+            items:
+              type: object
+              fields:
+                - name: name
+                  label: Category Name
+                  type: string
+                - name: link
+                  label: Category Link
+                  type: string
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - name: text
+            label: Footer Text
+            type: string
+
+  # Individual Pages
+  - name: pages
+    label: Pages
+    type: collection
+    path: my-site/src
+    extension: md
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: layout
+        label: Layout
+        type: string
+        default: base
       - name: body
         label: Body
         type: rich-text
