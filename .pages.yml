@@ -18,7 +18,7 @@ content:
         label: Body
         type: rich-text
 
-  # Site-wide Settings (simplified - just the basics that work)
+  # Site-wide Settings - NOW WITH WORKING MENUS!
   - name: site-settings
     label: Site Settings
     type: file
@@ -28,10 +28,12 @@ content:
         label: Site Title
         type: string
         description: Main site title (appears in browser tab)
+      
       - name: meta_description
         label: Site Description
         type: string
         description: Brief description for SEO
+      
       - name: header
         label: Header
         type: object
@@ -40,6 +42,35 @@ content:
             label: Logo Text
             type: string
             description: Text that appears in the header/logo area
+          
+          - name: nav_links
+            label: Navigation Menu Items
+            type: object
+            list: true
+            fields:
+              - name: text
+                label: Menu Text
+                type: string
+              - name: href
+                label: Link URL
+                type: string
+      
+      - name: sidebar
+        label: Sidebar
+        type: object
+        fields:
+          - name: categories
+            label: Categories
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Category Name
+                type: string
+              - name: link
+                label: Category URL
+                type: string
+      
       - name: footer
         label: Footer
         type: object
@@ -47,7 +78,6 @@ content:
           - name: text
             label: Footer Text
             type: string
-            description: Copyright text in footer
 
   # Individual Pages
   - name: pages
