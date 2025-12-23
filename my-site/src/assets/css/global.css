@@ -514,18 +514,21 @@ hr {
   }
   
   .desktop-nav {
-    display: none;
+    display: none !important;
   }
   
   .mobile-nav {
     display: flex;
   }
   
-  /* Hide the desktop nav container on mobile */
+  /* Completely hide the nav bar container on mobile */
   .site-nav {
-    padding: 0;
-    margin: 0;
-    background: transparent;
+    display: none;
+  }
+  
+  /* But show mobile nav when active */
+  .mobile-nav {
+    display: flex !important;
   }
   
   .content-wrapper {
