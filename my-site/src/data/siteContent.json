@@ -1,38 +1,43 @@
 {
-  "meta_title": "Cunt's Affiliate Site",
+  "meta_title": "Bill's Affiliate Site",
   "meta_description": "Product reviews and recommendations",
-  
-  "author": {
-    "name": "Site Author",
-    "image": "/assets/images/author.jpg"
-  },
-  
-  "hero": {
-    "enabled": false,
-    "title": "Welcome to My Site",
-    "subtitle": "Expert product reviews and recommendations",
-    "image": ""
-  },
-  
   "header": {
     "logo_text": "Cunt's Affiliate Site",
     "nav_links": [
-      { "text": "Home", "href": "/" },
-      { "text": "Reviews", "href": "/posts" },
-      { "text": "About", "href": "/about" },
-      { "text": "Contact", "href": "/contact" }
+      {
+        "text": "Home",
+        "href": "/"
+      },
+      {
+        "text": "Reviews",
+        "href": "/posts"
+      },
+      {
+        "text": "About",
+        "href": "/about"
+      },
+      {
+        "text": "Contact",
+        "href": "/contact"
+      }
     ]
   },
-  
   "sidebar": {
     "categories": [
-      { "name": "Tech Products", "link": "/category/tech" },
-      { "name": "Home & Garden", "link": "/category/home" },
-      { "name": "Kitchen Appliances", "link": "/category/kitchen" }
-    ],
-    "custom_html": ""
+      {
+        "name": "Tech Products",
+        "link": "/category/tech"
+      },
+      {
+        "name": "Home & Garden",
+        "link": "/category/home"
+      },
+      {
+        "name": "Kitchen Appliances",
+        "link": "/category/kitchen"
+      }
+    ]
   },
-  
   "footer": {
     "text": "© 2025 My Affiliate Site. All rights reserved."
   }
