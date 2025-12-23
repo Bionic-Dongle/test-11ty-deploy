@@ -18,7 +18,7 @@ content:
         label: Body
         type: rich-text
 
-  # Site-wide Settings - NOW WITH WORKING MENUS!
+  # Site-wide Settings
   - name: site-settings
     label: Site Settings
     type: file
@@ -78,6 +78,31 @@ content:
           - name: text
             label: Footer Text
             type: string
+
+  # CSS Styling - Like WordPress Additional CSS
+  - name: global-css
+    label: Global CSS
+    type: file
+    path: my-site/src/assets/css/global.css
+    fields:
+      - name: body
+        label: CSS Code
+        type: code
+        options:
+          language: css
+        description: Edit site-wide CSS styles, colors, and layout
+
+  - name: hub-css
+    label: Hub Site CSS
+    type: file
+    path: my-site/src/assets/css/hub-site.css
+    fields:
+      - name: body
+        label: CSS Code
+        type: code
+        options:
+          language: css
+        description: Edit hub/landing page specific styles
 
   # Individual Pages
   - name: pages
