@@ -49,6 +49,7 @@ body {
   background: linear-gradient(180deg, #FFB347 0%, #FF6B6B 50%, #6A4C10 100%);
   background-attachment: fixed;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Main Site Container - Unified Box */
@@ -395,7 +396,8 @@ hr {
   }
   
   .site-container {
-    max-width: 90%;
+    max-width: 1200px;
+    width: 90%;
     margin: 20px auto;
   }
   
@@ -413,9 +415,12 @@ hr {
 
 @media (max-width: 768px) {
   .site-container {
+    max-width: 100%;
     width: 100%;
     margin: 0;
     border-radius: 0;
+    border-left: none;
+    border-right: none;
   }
   
   .content-wrapper {
@@ -464,9 +469,12 @@ hr {
 
 @media (max-width: 480px) {
   .site-container {
+    max-width: 100%;
     width: 100%;
     margin: 0;
     border-radius: 0;
+    border-left: none;
+    border-right: none;
   }
   
   .content-wrapper {
