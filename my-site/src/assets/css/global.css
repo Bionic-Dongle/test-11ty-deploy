@@ -413,9 +413,9 @@ hr {
 
 @media (max-width: 768px) {
   .site-container {
-    width: 95%;
-    margin: 10px auto;
-    border-radius: 16px;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
   }
   
   .content-wrapper {
@@ -464,9 +464,9 @@ hr {
 
 @media (max-width: 480px) {
   .site-container {
-    width: 98%;
-    margin: 5px auto;
-    border-radius: 12px;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
   }
   
   .content-wrapper {
